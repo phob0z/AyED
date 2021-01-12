@@ -17,7 +17,7 @@ int main() {
                 salir = true;
                 break;
             default:
-                cout << "Opción invalida...\n";
+                cout << "Opción invalida ...\n";
                 break;
         };
     };
