@@ -1,0 +1,4 @@
+Arreglo: |4||1||2||3||5|
+Elemento a buscar: 2
+ELEMENTO ENCONTRADO!
+En la posición: 3
