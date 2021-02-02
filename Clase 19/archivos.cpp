@@ -69,10 +69,9 @@ void ingresar() {
         while (true) {
             cout << "\tIngrese la edad:     ";
             cin >> edad;
-            // revisa si los que se introducen son del tipo que espero
-            if (cin.fail() || cin.get() != '\n') { // Si falla en alguno o no es fin de linea
-                cin.clear(); // Cambio la bandera del cin para que vuelva a leer
-                while (cin.get() != '\n') // Vacio el cin hasta que sea fin de linea
+            if (cin.fail() || cin.get() != '\n') {
+                cin.clear();
+                while (cin.get() != '\n')
                     ;
                 error("Debe ingresar un numero");
             } else if (edad <= 0)
