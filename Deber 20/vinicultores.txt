@@ -1,0 +1,7 @@
+Precio Inicial2:
+Precio Inicial: 1
+Kilos: 10
+Tipo: B
+Tamaño: 2
+Precio final: 0.5
+Ganancia: 5

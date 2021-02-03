@@ -2,27 +2,39 @@
 #include <fstream>
 using namespace std;
 
-//typedef enum tipoUva { A, B } tipoUva;
-//typedef enum tamUva { 1, 2 } tamUva;
-
 int main() {
-    char tipo[1];
+    string nombreArch = "vinicultores.txt";
+    fstream archivo;
+    string tipo;
     int tam;
-    float precio=0, kilos=0, ganancia=0;
+    float precioI, precio, kilos, ganancia;
     cout << "¿Cual es el precio actual del kilo de uva? ";
-    cin >> precio;
+    cin >> precioI;
+    precio = precioI;
     cout << "¿Cuantos kilos va a vender? ";
     cin >> kilos;
     while(true) {
         cout << "Introduzca el tipo de uva (A o B): ";
         cin >> tipo;
-        if ((tipo[0]) != 'A' && toupper(tipo[0]) != 'B')
+        tipo = toupper(tipo[0]);
+        if (tipo != "A" && tipo != "B")
             cout << "Error: el tipo debe ser A o B\n";
         else
             break;
     };
-    cout << "Introduzca el tamaño de la uva (1 o 2): ";
-    cin >> tam;
+    while (true) {
+        cout << "Introduzca el tamaño de la uva (1 o 2): ";
+        cin >> tam;
+        if (cin.fail() || cin.get() != '\n') {
+            cin.clear();
+            while (cin.get() != '\n')
+                ;
+            cout << "Error: el tamaño debe ingresar un numero\n";
+        } else if (tam != 1 && tam != 2)
+            cout << "Error: el tipo debe 1 o 2\n";
+            else
+                break;
+    };
     if (tipo[0] == 'A')
         if (tam == 1)
             precio+=0.2;
@@ -33,7 +45,20 @@ int main() {
             precio-=0.3;
         else
             precio-=0.5;
-
-    
+    ganancia = precio * kilos;
+    cout << "Precio Inicial: " << precioI << "\n";
+    cout << "Kilos: " << kilos << "\n";
+    cout << "Tipo: " << tipo[0] << "\n";
+    cout << "Tamaño: " << tam << "\n";
+    cout << "Precio final: " << precio << "\n";
+    cout << "Ganancia: " << ganancia << "\n";
+    archivo.open(nombreArch, ios::out | ios::app);
+    archivo << "Precio Inicial: " << precioI << "\n";
+    archivo << "Kilos: " << kilos << "\n";
+    archivo << "Tipo: " << tipo[0] << "\n";
+    archivo << "Tamaño: " << tam << "\n";
+    archivo << "Precio final: " << precio << "\n";
+    archivo << "Ganancia: " << ganancia << "\n";
+    archivo.close();
     return 0;
 }
