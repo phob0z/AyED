@@ -53,7 +53,6 @@ void ingresar() {
     string nombre_arch, texto, opc;
     int edad;
     cout << "Ingrese el nombre del archivo: ";
-    cin.ignore();
     getline(cin, nombre_arch);
     while (true) {
         archivo.open(nombre_arch, ios::out | ios::app);
@@ -86,6 +85,7 @@ void ingresar() {
             if (toupper(opc[0]) != 'S' && toupper(opc[0]) != 'N')
                 error("Opcion invalida");
         } while(toupper(opc[0]) != 'S' && toupper(opc[0]) != 'N');
+        cin.ignore();
         archivo.close();
         if (toupper(opc[0]) == 'N')
             break;
@@ -96,7 +96,6 @@ void mostrar() {
     fstream archivo;
     string linea, nombre_arch;
     cout << "Ingrese el nombre del archivo: ";
-    cin.ignore();
     getline(cin, nombre_arch);
     archivo.open(nombre_arch, ios::in);
     if (archivo.fail()) {
