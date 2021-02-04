@@ -1,3 +1,3 @@
-# Deber Grupal #20: Vinicultores
+# Desafio Grupal #21: Busqueda Binaria
 
-Programa que permite calcular el precio del kilo de uva dependiendo del tipo y el tamaño, para luego calcular la ganancia, imprimirla por pantalla y de igual forma guarda la información en un archivo
+Programa que ordena un arreglo de datos por el metodo de la burbuja y luego usa busqueda binaria para encontrar un dato y escribe los resultados por pantalla y en un archivo llamado binario.txt
