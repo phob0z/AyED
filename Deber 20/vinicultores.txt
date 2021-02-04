@@ -1,6 +1,0 @@
-Precio Inicial: 12.3
-Kilos: 21.5
-Tipo: A
-Tamaño: 2
-Precio final: 12.6
-Ganancia: 270.9
