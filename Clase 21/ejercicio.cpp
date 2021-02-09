@@ -138,9 +138,8 @@ void pichincha() {
     }
     cout << ".\n";
     if (!band)
-        cout << "El ahorro ingresado no se encuentro registrado en ningun "\
+        cout << "El ahorro ingresado no se encontró registrado en ningún "\
         "mes.\n";
-    cout << "GRACIAS!\n";
 }
 
 void error(string cadena) {
