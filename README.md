@@ -1,3 +1,4 @@
-# Desafio Grupal #21: Busqueda Binaria
+# Clase 26 Desafio Busqueda por interpolación
 
-Programa que ordena un arreglo de datos por el metodo de la burbuja y luego usa busqueda binaria para encontrar un dato y escribe los resultados por pantalla y en un archivo llamado binario.txt
+Código en C++ de Archivo y algoritmo de Búsqueda por Interpolación  de un arreglo.
+Elaborado por: Raúl Tenorio, Manuel Auqui, Leonel Molina, Jimy Calvo, Jhael Nicolalde
