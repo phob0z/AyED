@@ -1,4 +1,0 @@
-Arreglo original: |-5||-5||-1||5||5||3||2||-4|
-Arreglo ordenado por seleccion: |-5||-5||-4||-1||2||3||5||5|
-Suma de numeros positivos: 15
-Suma de numeros negativos: -15
