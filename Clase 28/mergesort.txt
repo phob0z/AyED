@@ -1,2 +1,2 @@
-Arreglo original: [6][2][3][6][5]
-Arreglo ordenado con mergesort: [2][3][5][6][6]
+Arreglo original: [8][2][7][1][0]
+Arreglo ordenado con mergesort: [0][1][2][7][8]

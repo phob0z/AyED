@@ -1,2 +1,0 @@
-Arreglo original: [8][2][3][0][4]
-Arreglo ordenado por seleccion: [0][2][3][4][8]
