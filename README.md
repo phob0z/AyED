@@ -1,4 +1,4 @@
-# Clase 26 Desafio Busqueda por interpolación
+# Clase 28 Desafio Algoritmo de ordenamiento por Quicksort
 
-Código en C++ de Archivo y algoritmo de Búsqueda por Interpolación  de un arreglo.
+Código en C++ del algoritmo de ordenamiento por Quicksort
 Elaborado por: Raúl Tenorio, Manuel Auqui, Leonel Molina, Jimy Calvo, Jhael Nicolalde
