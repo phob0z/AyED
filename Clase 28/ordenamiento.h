@@ -1,7 +1,7 @@
-void ordenamientoMergesort(int vector[], int pinicial, int pfinal);
+void ordenamientoQuicksort(int vector[], int pinicial, int pfinal);
 int mitad(int vector[], int pinicial, int pfinal);
 
-void ordenamientoMergesort(int vector[], int pinicial, int pfinal)
+void ordenamientoQuicksort(int vector[], int pinicial, int pfinal)
 {
     int i = pinicial;
     int j = pfinal;
@@ -23,9 +23,9 @@ void ordenamientoMergesort(int vector[], int pinicial, int pfinal)
         }
     } while (i <= j);
     if (pinicial < j)
-        ordenamientoMergesort(vector, pinicial, j);
+        ordenamientoQuicksort(vector, pinicial, j);
     if (i < pfinal)
-        ordenamientoMergesort(vector, i, pfinal);
+        ordenamientoQuicksort(vector, i, pfinal);
 }
 
 int mitad(int vector[], int pinicial, int pfinal)
