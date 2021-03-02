@@ -1,4 +1,0 @@
-Arreglo original: [1][2][3][4][5][6][7][8][9][10]
-Arreglo ordenado por seleccion: [1][2][3][4][5][6][7][8][9][10]
-Elemento a buscar: 5
-Se encontró 5 en la posición 5 del arreglo

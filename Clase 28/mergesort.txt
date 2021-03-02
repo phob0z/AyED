@@ -1,0 +1,2 @@
+Arreglo original: [8][2][7][1][0]
+Arreglo ordenado con mergesort: [0][1][2][7][8]
