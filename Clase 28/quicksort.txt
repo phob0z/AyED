@@ -1,2 +1,2 @@
-Arreglo original: [1][2][6][2][8][3]
-Arreglo ordenado con quicksort: [1][2][2][3][6][8]
+Arreglo original: [6][-5][2][-1][4][0]
+Arreglo ordenado con quicksort: [-5][-1][0][2][4][6]
