@@ -1,12 +1,14 @@
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 int menu(string vector[], int tam);
-int leerEntero(string oracion, bool positivo);
 int leerEntero(string oracion);
+float leerReal(string oracion);
 void importante(string cadena);
 string fixtabs(string palabra, int max);
 string fixespacios(string palabra, int max);
+void vectorAleatorio(float vector[], int tam, int min, int max);
 
 int menu(string opciones[], int tam)
 {
@@ -38,27 +40,6 @@ int menu(string opciones[], int tam)
     return opc;
 };
 
-int leerEntero(string oracion, bool positivo) {
-    int entero;
-    while (true)
-    {
-        cout << oracion;
-        cin >> entero;
-        if (cin.fail() || cin.get() != '\n')
-        {
-            cin.clear();
-            while (cin.get() != '\n')
-                ;
-            cout << "Error, debe ser un número entero\n";
-        }
-        else if (positivo && entero < 0)
-            cout << "Error, debe ser un número entero positivo\n";
-        else
-            break;
-    };
-    return entero;
-}
-
 int leerEntero(string oracion) {
     int entero;
     while (true)
@@ -78,7 +59,32 @@ int leerEntero(string oracion) {
     return entero;
 }
 
-void imprimirVector(int vector[], int tam)
+float leerReal(string oracion) {
+    float real;
+    while (true)
+    {
+        cout << oracion;
+        cin >> real;
+        if (cin.fail() || cin.get() != '\n')
+        {
+            cin.clear();
+            while (cin.get() != '\n')
+                ;
+            cout << "Error, debe ser un número real\n";
+        }
+        else
+            break;
+    };
+    return (((double)((int)(real * 100 + 0.5))) / 100);
+}
+
+void ingresar(float vector[], int tam)
+{
+    for (int i = 0; i < tam; i++)
+        vector[i] = leerReal("Ingrese el valor de la posición [" + to_string(i + 1) + "]: ");
+}
+
+void imprimirVector(float vector[], int tam)
 {
     for (int i = 0; i < tam; i++)
     {
@@ -122,14 +128,26 @@ string fixtabs(string palabra, int max)
 
 string fixespacios(string palabra, int max)
 {
+    int except = 0, pos;
+    pos = palabra.find_first_of("áéíóúñÁÉÍÓÚÑ");
+    while (pos != std::string::npos)
+    {
+        except++;
+        pos = palabra.find_first_of("áéíóúñÁÉÍÓÚÑ", pos + 2);
+    }
+    int tamReal = palabra.length() - except;
     string espacios;
     espacios = palabra;
-    int tamesp = 0;
-    if (palabra.length() <= max - 2)
-        tamesp = max - palabra.length() - 2;
-    for (int i = 0; i < tamesp; i++)
-        espacios += " ";
-    if (palabra.length() <= max - 2)
-        espacios += "\t";
+    if (tamReal < max) {
+        for (int i = 0; i < max - tamReal; i++)
+            espacios += " ";
+    }
     return espacios;
+}
+
+void vectorAleatorio(float vector[], int tam, int min, int max)
+{
+    srand(time(NULL));
+    for (int i = 0; i < tam; i++)
+        vector[i] = (rand() % (max * 100)) / 100.0 + min;
 }

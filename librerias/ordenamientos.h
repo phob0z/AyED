@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
 
-void seleccion(int vector[], int tam);
-void burbuja(int vector[], int tam);
-void insercion(int vector[], int tam);
-void mergeSort(int vector[], int pinicial, int pfinal);
-void merge(int vector[], int pinicial, int pfinal, int medio);
-void quickSort(int vector[], int pinicial, int pfinal);
-void heapSort(int vector[], int tam);
-void heap(int vector[], int tam, int mid);
+void seleccion(float vector[], int tam);
+void burbuja(float vector[], int tam);
+void insercion(float vector[], int tam);
+void mergeSort(float vector[], int pinicial, int pfinal);
+void merge(float vector[], int pinicial, int pfinal, int medio);
+void quickSort(float vector[], int pinicial, int pfinal);
+void heapSort(float vector[], int tam);
+void heap(float vector[], int tam, int mid);
 
-void seleccion(int vector[], int tam) {
+void seleccion(float vector[], int tam) {
     int min;
     for (int i=0; i<tam; i++) {
         min = i;
@@ -21,7 +21,7 @@ void seleccion(int vector[], int tam) {
     }
 }
 
-void burbuja(int vector[], int tam)
+void burbuja(float vector[], int tam)
 {
     for (int i = 0; i < tam; i++)
         for (int j = i + 1; j < tam; j++)
@@ -29,9 +29,10 @@ void burbuja(int vector[], int tam)
                 swap(vector[j], vector[i]);
 }
 
-void insercion(int vector[], int tam)
+void insercion(float vector[], int tam)
 {
-    int pos, aux;
+    int pos;
+    float aux;
     for (int i = 0; i < tam; i++)
     {
         pos = i;
@@ -45,7 +46,7 @@ void insercion(int vector[], int tam)
     }
 }
 
-void mergeSort(int vector[], int pinicial, int pfinal)
+void mergeSort(float vector[], int pinicial, int pfinal)
 {
     int mitad;
     if (pinicial < pfinal)
@@ -57,9 +58,9 @@ void mergeSort(int vector[], int pinicial, int pfinal)
     }
 }
 
-void merge(int vector[], int pinicial, int pfinal, int medio)
+void merge(float vector[], int pinicial, int pfinal, int medio)
 {
-    int temp[pfinal - pinicial + 1];
+    float temp[pfinal - pinicial + 1];
     int i = pinicial;
     int j = medio + 1;
     int k = 0;
@@ -93,11 +94,11 @@ void merge(int vector[], int pinicial, int pfinal, int medio)
         vector[i] = temp[i - pinicial];
 }
 
-void quickSort(int vector[], int pinicial, int pfinal)
+void quickSort(float vector[], int pinicial, int pfinal)
 {
     int i = pinicial;
     int j = pfinal;
-    int piv = vector[(pinicial + pfinal) / 2];
+    float piv = vector[(pinicial + pfinal) / 2];
     do {
         while (vector[i]<piv)
             i++;
@@ -115,7 +116,7 @@ void quickSort(int vector[], int pinicial, int pfinal)
         quickSort(vector, i, pfinal);
 }
 
-void heapSort(int vector[], int tam)
+void heapSort(float vector[], int tam)
 { 
     for (int i = tam / 2 - 1; i >= 0; i--) 
         heap(vector, tam, i); 
@@ -125,7 +126,7 @@ void heapSort(int vector[], int tam)
     } 
 }
 
-void heap(int vector[], int tam, int mid)
+void heap(float vector[], int tam, int mid)
 { 
     int largest = mid;
     int l = 2 * mid + 1;
