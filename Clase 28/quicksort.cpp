@@ -1,9 +1,6 @@
 #include <iostream>
 #include <fstream>
-// #include "ordenamiento.h"
-#include "../librerias/ordenamientos.h"
-#include "../librerias/busquedas.h"
-#include "../librerias/varios.h"
+#include "ordenamiento.h"
 
 using namespace std;
 
@@ -13,6 +10,7 @@ void imprimir(int vector[], int tam);
 int main()
 {
     int pos;
+    int buscar;
     int tam = 10;
     while (true)
     {
@@ -43,10 +41,9 @@ int main()
         archivo << "[" << arreglo[i] << "]";
     };
     archivo << "\n";
-    heapSort(arreglo, tam);
-    cout << "\nArreglo luego del ordenamiento por heapSort: ";
+    ordenamientoQuicksort(arreglo, 0, tam-1);
+    cout << "\nArreglo luego del ordenamiento por quicksort: ";
     imprimir(arreglo, tam);
-    importante(lineal(arreglo, tam, leerEntero("¿Que número desea buscar? ")));
     archivo << "Arreglo ordenado con quicksort: ";
     for (int i = 0; i < tam; i++)
     {
