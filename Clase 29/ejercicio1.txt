@@ -1,0 +1,12 @@
+------------------------------------------------------------
+
+Número de elementos del vector: 20
+
+VECTOR: [76][95][95][74][93][22][94][79][47][85][74][14][71][63][72][45][64][98][40][89]
+
+El número mayor es: 98
+El número menor es: 14
+
+El número mayor se repite 1 veces.
+El número menor se repite 1 veces.
+------------------------------------------------------------

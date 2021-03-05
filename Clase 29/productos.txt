@@ -1,0 +1,14 @@
+******* DATOS DEL PROVEEDOR *******
+Código	Nombre	Ciudad	Teléfono
+123	asd	asd	123
+zxc	asd	asd	321
+
+
+******* DATOS DEL PRODUCTO *******
+Nombre	Precio	Cantidad	Estado
+asd	123	32		asad
+
+
+El precio total de productos:		$123
+Cantidad de productos ingresados:	32
+El valor total:				$3936

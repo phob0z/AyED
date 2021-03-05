@@ -1,0 +1,4 @@
+Arreglo original: [1][7][4][0][-1]
+Arreglo ordenado por Mergesort: [-1][0][1][4][7]
+Elemento a buscar: 0
+Se encontró 0 en la posición 2 del arreglo
