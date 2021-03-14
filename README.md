@@ -1,4 +1,4 @@
-# Clase 28 Desafio Algoritmo de ordenamiento por Quicksort
+# Clase 30 Algoritmo de ordenamiento HeapSort mediante librería
 
-Código en C++ del algoritmo de ordenamiento por Quicksort
-Elaborado por: Raúl Tenorio, Manuel Auqui, Leonel Molina, Jimy Calvo, Jhael Nicolalde
+Código en C++ del algoritmo de ordenamiento HeapSort mediante librería
+Elaborado por: Leonel Molina
