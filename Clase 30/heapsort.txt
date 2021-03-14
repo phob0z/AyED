@@ -1,0 +1,2 @@
+Arreglo original: [4][5][6][1][7][2][35][5]
+Arreglo ordenado con heapsort: [1][2][4][5][5][6][7][35]
