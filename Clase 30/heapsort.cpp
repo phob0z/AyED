@@ -32,7 +32,7 @@ int main()
     int arreglo[tam];
     ingresar(arreglo, tam);
     fstream archivo;
-    archivo.open("quicksort.txt", ios::out);
+    archivo.open("heapsort.txt", ios::out);
     cout << "\nArreglo original: ";
     imprimir(arreglo, tam);
     archivo << "Arreglo original: ";
@@ -41,10 +41,10 @@ int main()
         archivo << "[" << arreglo[i] << "]";
     };
     archivo << "\n";
-    ordenamientoQuicksort(arreglo, 0, tam-1);
-    cout << "\nArreglo luego del ordenamiento por quicksort: ";
+    heapSort(arreglo, tam);
+    cout << "\nArreglo luego del ordenamiento por heapsort: ";
     imprimir(arreglo, tam);
-    archivo << "Arreglo ordenado con quicksort: ";
+    archivo << "Arreglo ordenado con heapsort: ";
     for (int i = 0; i < tam; i++)
     {
         archivo << "[" << arreglo[i] << "]";
